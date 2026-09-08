@@ -7,8 +7,6 @@ import {
   FiX,
 } from "react-icons/fi";
 
-import logo from "../assets/logo.png";
-
 const navItems = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
@@ -24,11 +22,11 @@ function Navbar() {
     <header className="absolute left-0 top-0 z-50 w-full">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <nav className="flex h-24 items-center justify-between border-b border-slate-200/80">
-          
+
           {/* LOGO */}
           <Link to="/" className="flex items-center">
             <img
-              src={logo}
+              src="/images/logo.png"
               alt="Resource Plus Limited"
               className="h-14 w-auto object-contain"
             />
