@@ -7,6 +7,8 @@ import {
   FiX,
 } from "react-icons/fi";
 
+import logo from "../assets/logo.png";
+
 const navItems = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
@@ -21,34 +23,19 @@ function Navbar() {
   return (
     <header className="absolute left-0 top-0 z-50 w-full">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-
         <nav className="flex h-24 items-center justify-between border-b border-slate-200/80">
-
+          
           {/* LOGO */}
-          <Link
-            to="/"
-            className="flex items-center gap-3"
-          >
-            <div className="flex h-11 w-11 items-center justify-center rounded-sm bg-[#063B66]">
-              <span className="text-lg font-black tracking-tight text-white">
-                RP
-              </span>
-            </div>
-
-            <div>
-              <div className="text-sm font-bold tracking-[0.16em] text-[#063B66]">
-                RESOURCE PLUS
-              </div>
-
-              <div className="mt-0.5 text-[9px] font-semibold tracking-[0.28em] text-slate-400">
-                LIMITED
-              </div>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img
+              src={logo}
+              alt="Resource Plus Limited"
+              className="h-14 w-auto object-contain"
+            />
           </Link>
 
           {/* DESKTOP NAV */}
           <div className="hidden items-center gap-8 lg:flex">
-
             {navItems.map((item) => (
               <Link
                 key={item.label}
@@ -70,7 +57,6 @@ function Navbar() {
                 className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               />
             </Link>
-
           </div>
 
           {/* MOBILE BUTTON */}
@@ -78,10 +64,10 @@ function Navbar() {
             onClick={() => setOpen(!open)}
             className="flex h-11 w-11 items-center justify-center rounded-sm border border-slate-200 text-[#063B66] lg:hidden"
             aria-label="Toggle menu"
+            aria-expanded={open}
           >
             {open ? <FiX size={22} /> : <FiMenu size={22} />}
           </button>
-
         </nav>
 
         {/* MOBILE MENU */}
@@ -94,7 +80,6 @@ function Navbar() {
               className="overflow-hidden border-b border-slate-200 bg-white shadow-xl lg:hidden"
             >
               <div className="flex flex-col px-2 py-5">
-
                 {navItems.map((item) => (
                   <Link
                     key={item.label}
@@ -114,12 +99,10 @@ function Navbar() {
                   Start a Project
                   <FiArrowUpRight />
                 </Link>
-
               </div>
             </motion.div>
           )}
         </AnimatePresence>
-
       </div>
     </header>
   );
