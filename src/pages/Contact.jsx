@@ -918,10 +918,10 @@ function Contact() {
 
                   <div className="mt-6 flex flex-wrap gap-5">
                     <a
-                      href="mailto:clem@resource-plus.net"
+                      href="mailto:adebanjo.oluwaseun@resource-plus.net"
                       className="text-sm font-semibold text-white transition-colors hover:text-[#19A7E0]"
                     >
-                      clem@resource-plus.net
+                      adebanjo.oluwaseun@resource-plus.net
                     </a>
 
                     <a
@@ -931,18 +931,13 @@ function Contact() {
                       jude@resource-plus.net
                     </a>
 
-                    <a
-                      href="mailto:tom@resource-plus.net"
-                      className="text-sm font-semibold text-white transition-colors hover:text-[#19A7E0]"
-                    >
-                      tom@resource-plus.net
-                    </a>
+                   
                   </div>
                 </div>
               </div>
 
               <a
-                href="mailto:clem@resource-plus.net"
+                href="mailto:adebanjo.oluwaseun@resource-plus.net"
                 className="group flex items-center justify-center bg-[#19A7E0] px-10 py-8 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-[#063B66]"
               >
                 Email Us

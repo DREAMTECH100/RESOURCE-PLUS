@@ -41,7 +41,7 @@ const leadership = [
     name: "Omereonye Jenkins",
     role: "Project Engineer",
     qualification: "B.Eng Electrical Engineering",
-    email: "tom@resource-plus.net",
+    email: "jenkins.omereonye@resource-plus.net",
     phone: "",
     image: "jenkins.jpeg",
   },
