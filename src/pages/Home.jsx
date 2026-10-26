@@ -101,7 +101,7 @@ function Home() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url("${img(
-              "Installation of Lightning Protection System.jpg"
+              "Installation of grounding system (earth pit).jpg"
             )}")`,
           }}
         />
