@@ -9,6 +9,9 @@ import {
 } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
+// Local images live in /public/images
+const img = (name) => encodeURI(`/images/${name}`);
+
 function FadeIn({ children, delay = 0, className = "" }) {
   return (
     <motion.div
@@ -33,14 +36,14 @@ const services = [
     title: "Lightning Protection & Earthing",
     text:
       "Engineered lightning protection, earthing and grounding systems, surge protection, Cadweld connections, testing and commissioning.",
-    image:
-      "https://www.dehn-africa.com/sites/default/files/styles/2_1_ratio_2880_x_1440/public/marcom/HVI-light-plus-819600-2880x1440_0.jpg?itok=2lSzOpuW",
+    image: img("Installation of grounding system (earth pit).jpg"),
   },
   {
     number: "02",
     title: "Construction & Real Estate",
     text:
       "From site stabilisation and civil works to luxury residential developments, commercial buildings and end-to-end project management.",
+    // No local image yet - template kept
     image:
       "https://images.nigeriapropertycentre.com/properties/images/thumbs/2787920/067e39419c9014-luxury-built-8-bedroom-duplex-with-private-pool-detached-duplexes-for-sale-asokoro-district-abuja.jpg",
   },
@@ -49,16 +52,14 @@ const services = [
     title: "Telecommunications Infrastructure",
     text:
       "BTS build-out and commissioning, site acquisition, mast and tower projects, cabling, server rooms and data centre infrastructure.",
-    image:
-      "https://ocdn.eu/images/pulscms/MjE7MDA_/99f6acf954182f7f0d262b77f21d08fa.jpg",
+    image: img("NetworkTelecom Mast Installation and Maintenance.jpg"),
   },
   {
     number: "04",
     title: "Power & Civil Engineering",
     text:
       "Power substations, MV/LV electrical installations, civil and structural engineering and mechanical services.",
-    image:
-      "https://fgnpowerco.ng/wp-content/uploads/2023/05/7-scaled.jpeg",
+    image: img("Earthing of Power Distribution Board.jpg"),
   },
 ];
 
@@ -99,8 +100,9 @@ function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('https://jammosconstruct.com/Asset/images/optimized/telecommunication.jpg')",
+            backgroundImage: `url("${img(
+              "Installation of Lightning Protection System.jpg"
+            )}")`,
           }}
         />
 

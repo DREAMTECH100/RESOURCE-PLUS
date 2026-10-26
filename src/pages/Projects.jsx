@@ -13,6 +13,9 @@ import {
 } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
+// Local images live in /public/images
+const img = (name) => encodeURI(`/images/${name}`);
+
 const projects = [
   {
     id: "chevron",
@@ -23,8 +26,7 @@ const projects = [
     location: "Warri · Escravos · Abuja · Lekki · Gbagada",
     description:
       "A multi-location remediation programme covering five Chevron Nigeria facilities, focused on upgrading lightning protection, grounding and electrical infrastructure protection.",
-    image:
-      "https://images.unsplash.com/photo-1558449033-2cf9f0f3f4f4?auto=format&fit=crop&w=2000&q=90",
+    image: img("Chevron Datacentre.jpg"),
     icon: FiShield,
     featured: true,
     highlights: [
@@ -49,8 +51,9 @@ const projects = [
     location: "Sagamu, Ogun State",
     description:
       "A comprehensive lightning protection and grounding solution for a critical industrial facility, designed around site assessment, earthing, lightning protection, surge protection and system verification.",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2000&q=90",
+    image: img(
+      "Installation of Foundational earthing at Flour Mills Apapa SBM warehouse.jpg"
+    ),
     icon: FiZap,
     highlights: [
       "Detailed site inspections and electrical measurements",
@@ -74,6 +77,7 @@ const projects = [
     location: "Awka Millennium City, Anambra State",
     description:
       "Resource Plus served as lead developer and construction company for a premium residential development within Awka Millennium City, covering site stabilisation through luxury terrace duplex construction.",
+    // No local image yet - template kept
     image:
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=90",
     icon: FiHome,
@@ -102,6 +106,7 @@ const projects = [
     location: "Awka Millennium City, Anambra State",
     description:
       "Resource Plus was commissioned to construct the power substation serving Awka Millennium City, forming a critical part of the city's power distribution infrastructure.",
+    // No local image yet - template kept
     image:
       "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=2000&q=90",
     icon: FiZap,
@@ -127,6 +132,7 @@ const projects = [
     location: "Awka Millennium City, Anambra State",
     description:
       "A premium residential development comprising four four-bedroom duplex units with contemporary architecture, smart-home automation and superior quality finishes.",
+    // No local image yet - template kept
     image:
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=90",
     icon: FiHome,
@@ -155,6 +161,7 @@ const projects = [
     location: "Awka Millennium City, Anambra State",
     description:
       "A residential development comprising two five-bedroom detached luxury duplexes, incorporating structural works, architectural finishing and full mechanical and electrical installations.",
+    // No local image yet - template kept
     image:
       "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2000&q=90",
     icon: FiHome,
@@ -263,8 +270,8 @@ function Projects() {
           className="absolute inset-0"
         >
           <img
-            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2200&q=90"
-            alt="Engineering construction project"
+            src={img("Exothermic welding of a structural beam.jpg")}
+            alt="Exothermic welding of a structural beam"
             className="h-full w-full object-cover"
           />
         </motion.div>
