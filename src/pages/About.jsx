@@ -325,7 +325,7 @@ function About() {
 
               <div className="relative overflow-hidden">
                 <img
-  src="/images/rpl.png"
+  src="/images/Earthing Installation for Industrial diesel tanks.jpg"
   alt="Engineering and construction professionals"
   className="h-[500px] w-full object-cover"
 />
