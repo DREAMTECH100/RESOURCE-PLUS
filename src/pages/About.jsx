@@ -12,6 +12,9 @@ import {
 } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
+// Local images live in /public/images
+const img = (name) => encodeURI(`/images/${name}`);
+
 const leadership = [
   {
     name: "Clem Nwogbo",
@@ -78,26 +81,24 @@ const capabilities = [
   {
     title: "Lightning Protection & Earthing",
     text: "Engineered protection systems for industrial facilities, telecommunications infrastructure and high-value assets.",
-    image:
-      "https://www.dehn-africa.com/sites/default/files/styles/2_1_ratio_2880_x_1440/public/marcom/HVI-light-plus-819600-2880x1440_0.jpg?itok=2lSzOpuW",
+    image: img("Installation of Lightning Protection System.jpg"),
   },
   {
     title: "Telecommunications Infrastructure",
     text: "BTS build-out, site acquisition, mast and tower projects, cabling, server rooms and data centre infrastructure.",
-    image:
-      "https://ocdn.eu/images/pulscms/MjE7MDA_/99f6acf954182f7f0d262b77f21d08fa.jpg",
+    image: img("NetworkTelecom Mast Installation and Maintenance.jpg"),
   },
   {
     title: "Power & Civil Engineering",
     text: "Power substations, MV/LV electrical systems, civil and structural engineering and mechanical services.",
-    image:
-      "https://fgnpowerco.ng/wp-content/uploads/2023/05/7-scaled.jpeg",
+    image: img("Earthing of Power Distribution Board.jpg"),
   },
   {
     title: "Construction & Real Estate",
     text: "End-to-end construction, site stabilisation, project management and premium residential developments.",
-    image:
-      "https://images.nigeriapropertycentre.com/properties/images/thumbs/2787920/067e39419c9014-luxury-built-8-bedroom-duplex-with-private-pool-detached-duplexes-for-sale-asokoro-district-abuja.jpg",
+    image: img(
+      "Installation of Foundational earthing at Flour Mills Apapa SBM warehouse.jpg"
+    ),
   },
 ];
 
@@ -155,12 +156,11 @@ function About() {
       ========================================================== */}
       <section className="relative min-h-[720px] overflow-hidden bg-[#F4F9FC]">
 
-        {/* Online background image */}
+        {/* Background image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('https://teamgroup.it/wp-content/uploads/2019/01/Team-Group-Ajaokuta-Warri-Rail-Line-3.jpg')",
+            backgroundImage: `url("${img("Network Mast Maintenance 2.jpg")}")`,
           }}
         />
 
