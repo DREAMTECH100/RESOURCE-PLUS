@@ -307,7 +307,7 @@ function Home() {
                 className="relative overflow-hidden"
               >
                 <img
-                  src="rpl2.png"
+                  src="Confirmation of grounding integrity for the equipment racks.jpg"
                   alt="Engineering and construction professionals"
                   className="h-[520px] w-full object-cover"
                 />

@@ -17,6 +17,9 @@ import {
 } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
+// Local images live in /public/images
+const img = (name) => encodeURI(`/images/${name}`);
+
 const services = [
   {
     number: "01",
@@ -24,8 +27,7 @@ const services = [
     shortTitle: "Facility Electrical Protection",
     description:
       "Engineered lightning, grounding, bonding and surge protection systems designed to protect people, buildings, equipment and critical infrastructure.",
-    image:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1800&q=85",
+    image: img("Installation of Lightning Protection System.jpg"),
     icon: FiZap,
     color: "#19A7E0",
     capabilities: [
@@ -45,6 +47,7 @@ const services = [
     shortTitle: "Built Environment",
     description:
       "End-to-end civil construction and premium building solutions covering site development, structural works, project management and high-quality finishes.",
+    // No local image yet - template kept
     image:
       "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=85",
     icon: FiHome,
@@ -66,8 +69,7 @@ const services = [
     shortTitle: "Telecom Infrastructure",
     description:
       "Infrastructure services supporting telecommunications networks, from site development and towers to cabling, server rooms and data-centre environments.",
-    image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=85",
+    image: img("NetworkTelecom Mast Installation and Maintenance.jpg"),
     icon: FiRadio,
     color: "#19A7E0",
     capabilities: [
@@ -87,8 +89,7 @@ const services = [
     shortTitle: "Power Infrastructure",
     description:
       "Integrated civil, structural, electrical and mechanical engineering for power infrastructure and major development projects.",
-    image:
-      "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1800&q=85",
+    image: img("Earthing of Power Distribution Board.jpg"),
     icon: FiTrendingUp,
     color: "#19A7E0",
     capabilities: [
@@ -245,8 +246,8 @@ function Services() {
           className="absolute inset-0"
         >
           <img
-            src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=2200&q=90"
-            alt="Power infrastructure"
+            src={img("Installation of Signal Reference Grid for the data centre.jpg")}
+            alt="Signal reference grid installation at a data centre"
             className="h-full w-full object-cover"
           />
         </motion.div>
