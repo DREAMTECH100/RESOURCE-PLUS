@@ -307,7 +307,7 @@ function Home() {
                 className="relative overflow-hidden"
               >
                 <img
-                  src="Installation of Signal Reference Grid for the data centre 3.jpg"
+                  src="/images/Installation of Signal Reference Grid for the data centre 3.jpg"
                   alt="Engineering and construction professionals"
                   className="h-[520px] w-full object-cover"
                 />
